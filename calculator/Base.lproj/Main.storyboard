@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,211 +13,244 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGr-aF-6ey" userLabel="Total" customClass="ButtonFormatterTotal" customModule="calculator" customModuleProvider="target">
-                                <rect key="frame" x="20" y="69" width="374" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovF-Hh-Nu1" userLabel="Operation4" customClass="OperatorLabel" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="206" width="350" height="40"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Cwg-ar-N6S"/>
+                                    <constraint firstAttribute="height" constant="40" id="1Mu-kC-5qO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cqi-F7-bMF">
-                                <rect key="frame" x="20" y="169" width="374" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-AD-mzG" customClass="ButtonFormatter3" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="AC"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96z-Fd-VN6" customClass="ButtonFormatter3" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="95.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="+/-"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-af-FoA" customClass="ButtonFormatter3" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="191" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="%"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-Ia-uoY" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="286.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="/"/>
-                                    </button>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkk-wd-wJn" userLabel="Operation3" customClass="OperatorLabel" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="246" width="350" height="40"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGI-7X-v2d" userLabel="Operation2" customClass="OperatorLabel" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="286" width="350" height="40"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGr-aF-6ey" userLabel="Operation1" customClass="OperatorLabel" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="326" width="350" height="40"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqI-Zc-fQi" userLabel="Total" customClass="TotalLabel" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="366" width="350" height="80"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="jIJ-af-FoA" firstAttribute="width" secondItem="Ktn-AD-mzG" secondAttribute="width" id="b9T-h4-wEG"/>
-                                    <constraint firstAttribute="height" constant="50" id="eBd-yW-CWp"/>
-                                    <constraint firstItem="IRB-Ia-uoY" firstAttribute="width" secondItem="Ktn-AD-mzG" secondAttribute="width" id="rTi-Kq-xqO"/>
-                                    <constraint firstItem="96z-Fd-VN6" firstAttribute="width" secondItem="Ktn-AD-mzG" secondAttribute="width" id="rfT-bT-baL"/>
+                                    <constraint firstAttribute="height" constant="80" id="jeF-Mk-72A"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u7y-GM-fFk">
-                                <rect key="frame" x="20" y="239" width="374" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-mh-LC2">
+                                <rect key="frame" x="20" y="462" width="350" height="332"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWI-Oe-lDj" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="7"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGX-rz-puC" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="95.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="8"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCU-Ob-05L" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="191" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="9"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McB-Xh-MbQ" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="286.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="X"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cqi-F7-bMF">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-AD-mzG" customClass="ButtonFormatter3" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96z-Fd-VN6" customClass="ButtonFormatter3" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="89.666666666666686" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+/-"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-af-FoA" customClass="ButtonFormatter3" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="81.666666666666686" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="%"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-Ia-uoY" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268.66666666666669" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="/"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="d5P-Pr-i5H"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u7y-GM-fFk">
+                                        <rect key="frame" x="0.0" y="68" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWI-Oe-lDj" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGX-rz-puC" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="89.666666666666686" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCU-Ob-05L" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="81.666666666666686" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McB-Xh-MbQ" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268.66666666666669" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="X"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-Jc-08T">
+                                        <rect key="frame" x="0.0" y="136" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-IO-xCH" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhc-ou-0LM" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="89.666666666666686" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-iT-sNn" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="81.666666666666686" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-2O-xyO" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268.66666666666669" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="/"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Ee-1dh">
+                                        <rect key="frame" x="0.0" y="204" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-XY-PDg" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-GA-eZJ" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="89.666666666666686" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8L-Xc-kDs" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="81.666666666666686" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-1S-PYH" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268.66666666666669" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="V0u-GA-eZJ" firstAttribute="width" secondItem="Xf9-XY-PDg" secondAttribute="width" id="9hh-OY-kN7"/>
+                                            <constraint firstItem="c8L-Xc-kDs" firstAttribute="width" secondItem="Xf9-XY-PDg" secondAttribute="width" id="Dj4-g4-wUq"/>
+                                            <constraint firstItem="dyM-1S-PYH" firstAttribute="width" secondItem="Xf9-XY-PDg" secondAttribute="width" id="NU8-0G-3uN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FJX-6D-vSf">
+                                        <rect key="frame" x="0.0" y="272" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwN-1Y-47h" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-or-xwX" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="81.666666666666686" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=","/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5z-jr-GvG" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268.66666666666669" y="0.0" width="81.333333333333314" height="60"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="="/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MGX-rz-puC" firstAttribute="width" secondItem="ZWI-Oe-lDj" secondAttribute="width" id="56r-kJ-K5t"/>
-                                    <constraint firstItem="McB-Xh-MbQ" firstAttribute="width" secondItem="ZWI-Oe-lDj" secondAttribute="width" id="DjS-R6-pvp"/>
-                                    <constraint firstItem="DCU-Ob-05L" firstAttribute="width" secondItem="ZWI-Oe-lDj" secondAttribute="width" id="MS2-ca-lrS"/>
-                                    <constraint firstAttribute="height" constant="50" id="ZEa-1n-8dD"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-Jc-08T">
-                                <rect key="frame" x="20" y="309" width="374" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-IO-xCH" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="4"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhc-ou-0LM" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="95.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="5"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-iT-sNn" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="191" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="6"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbO-2O-xyO" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="286.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="/"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Xhc-ou-0LM" firstAttribute="width" secondItem="yXg-IO-xCH" secondAttribute="width" id="Hfk-Eb-Woz"/>
-                                    <constraint firstItem="BbO-2O-xyO" firstAttribute="width" secondItem="yXg-IO-xCH" secondAttribute="width" id="LRZ-I4-2aU"/>
-                                    <constraint firstAttribute="height" constant="50" id="Xhe-hi-XcO"/>
-                                    <constraint firstItem="VHL-iT-sNn" firstAttribute="width" secondItem="yXg-IO-xCH" secondAttribute="width" id="nu6-ff-0FX"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Ee-1dh">
-                                <rect key="frame" x="20" y="379" width="374" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-XY-PDg" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="1"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-GA-eZJ" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="95.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="2"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8L-Xc-kDs" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="191" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="3"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-1S-PYH" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="286.5" y="0.0" width="87.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="+"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="dyM-1S-PYH" firstAttribute="width" secondItem="Xf9-XY-PDg" secondAttribute="width" id="Iax-pO-Jlm"/>
-                                    <constraint firstItem="c8L-Xc-kDs" firstAttribute="width" secondItem="Xf9-XY-PDg" secondAttribute="width" id="OWf-Pf-eZZ"/>
-                                    <constraint firstItem="V0u-GA-eZJ" firstAttribute="width" secondItem="Xf9-XY-PDg" secondAttribute="width" id="djL-qi-9Tr"/>
-                                    <constraint firstAttribute="height" constant="50" id="fZI-F3-FdG"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FJX-6D-vSf">
-                                <rect key="frame" x="20" y="449" width="374" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwN-1Y-47h" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="179" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="0"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-or-xwX" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="187" y="0.0" width="89.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title=","/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5z-jr-GvG" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
-                                        <rect key="frame" x="284.5" y="0.0" width="89.5" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="="/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Goh-or-xwX" firstAttribute="width" secondItem="dwN-1Y-47h" secondAttribute="width" multiplier="0.5" id="BPG-ue-pb7"/>
-                                    <constraint firstAttribute="height" constant="50" id="UUi-lg-9Cd"/>
-                                    <constraint firstItem="Y5z-jr-GvG" firstAttribute="width" secondItem="dwN-1Y-47h" secondAttribute="width" multiplier="0.5" id="sIm-LK-LVa"/>
+                                    <constraint firstItem="FJX-6D-vSf" firstAttribute="height" secondItem="cqi-F7-bMF" secondAttribute="height" id="1Va-0o-dwT"/>
+                                    <constraint firstItem="Y5z-jr-GvG" firstAttribute="width" secondItem="dyM-1S-PYH" secondAttribute="width" id="7RL-QB-Urp"/>
+                                    <constraint firstItem="Goh-or-xwX" firstAttribute="width" secondItem="c8L-Xc-kDs" secondAttribute="width" id="Ev4-5X-w2H"/>
+                                    <constraint firstItem="Xcc-Ee-1dh" firstAttribute="height" secondItem="cqi-F7-bMF" secondAttribute="height" id="Fc9-qs-BXH"/>
+                                    <constraint firstItem="Ax4-Jc-08T" firstAttribute="height" secondItem="cqi-F7-bMF" secondAttribute="height" id="GWi-IA-QEP"/>
+                                    <constraint firstItem="u7y-GM-fFk" firstAttribute="height" secondItem="cqi-F7-bMF" secondAttribute="height" id="XA5-fJ-dTY"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Xcc-Ee-1dh" firstAttribute="top" secondItem="Ax4-Jc-08T" secondAttribute="bottom" constant="20" id="3p2-Ga-OV5"/>
+                            <constraint firstItem="ovF-Hh-Nu1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Uc-yS-ufp"/>
+                            <constraint firstItem="DGr-aF-6ey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2GD-17-Xbh"/>
+                            <constraint firstItem="uqI-Zc-fQi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="42D-Wg-a0x"/>
+                            <constraint firstItem="tkk-wd-wJn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="89a-kF-Vxt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGr-aF-6ey" secondAttribute="trailing" constant="20" id="A1s-xY-1Fa"/>
                             <constraint firstItem="DGr-aF-6ey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AJX-8c-rqJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ax4-Jc-08T" secondAttribute="trailing" constant="20" id="B7z-Dy-TmZ"/>
-                            <constraint firstItem="u7y-GM-fFk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cm1-In-a2Z"/>
-                            <constraint firstItem="u7y-GM-fFk" firstAttribute="top" secondItem="cqi-F7-bMF" secondAttribute="bottom" constant="20" id="FJy-LJ-KQC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xcc-Ee-1dh" secondAttribute="trailing" constant="20" id="Iia-Kh-QJ8"/>
-                            <constraint firstItem="Ax4-Jc-08T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="J4c-pi-gSv"/>
-                            <constraint firstItem="DGr-aF-6ey" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="PfB-Yg-I33"/>
-                            <constraint firstItem="cqi-F7-bMF" firstAttribute="top" secondItem="DGr-aF-6ey" secondAttribute="bottom" constant="20" id="Pik-ZN-P5W"/>
-                            <constraint firstItem="Xcc-Ee-1dh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vlu-Q2-YCP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u7y-GM-fFk" secondAttribute="trailing" constant="20" id="YZq-An-5kI"/>
-                            <constraint firstItem="Ax4-Jc-08T" firstAttribute="top" secondItem="u7y-GM-fFk" secondAttribute="bottom" constant="20" id="aYo-pf-n3i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJX-6D-vSf" secondAttribute="trailing" constant="20" id="ala-zq-n09"/>
-                            <constraint firstItem="FJX-6D-vSf" firstAttribute="top" secondItem="Xcc-Ee-1dh" secondAttribute="bottom" constant="20" id="bRd-4l-pCk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cqi-F7-bMF" secondAttribute="trailing" constant="20" id="cxq-3W-eX1"/>
-                            <constraint firstItem="FJX-6D-vSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i5I-9c-bPa"/>
+                            <constraint firstItem="DGr-aF-6ey" firstAttribute="top" secondItem="cGI-7X-v2d" secondAttribute="bottom" id="Fxx-LO-YQN"/>
+                            <constraint firstItem="cGI-7X-v2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HDW-rz-fnO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uqI-Zc-fQi" secondAttribute="trailing" constant="20" id="HJ4-OD-CCe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovF-Hh-Nu1" secondAttribute="trailing" constant="20" id="IIk-Wg-RlB"/>
+                            <constraint firstItem="cGI-7X-v2d" firstAttribute="height" secondItem="ovF-Hh-Nu1" secondAttribute="height" id="Jzt-hd-Oq0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cGI-7X-v2d" secondAttribute="trailing" constant="20" id="M2f-YZ-gdx"/>
+                            <constraint firstItem="tkk-wd-wJn" firstAttribute="height" secondItem="ovF-Hh-Nu1" secondAttribute="height" id="OA0-ci-aaQ"/>
+                            <constraint firstItem="ovF-Hh-Nu1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SxZ-GA-b5R"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5Tw-mh-LC2" secondAttribute="bottom" constant="16" id="YvS-Ba-qA1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Tw-mh-LC2" secondAttribute="trailing" constant="20" id="bMf-J1-Z88"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tkk-wd-wJn" secondAttribute="trailing" constant="20" id="bYI-LE-FyB"/>
+                            <constraint firstItem="tkk-wd-wJn" firstAttribute="top" secondItem="ovF-Hh-Nu1" secondAttribute="bottom" id="cLu-HN-IMa"/>
+                            <constraint firstItem="5Tw-mh-LC2" firstAttribute="top" secondItem="uqI-Zc-fQi" secondAttribute="bottom" constant="16" id="dbv-u8-leR"/>
+                            <constraint firstItem="uqI-Zc-fQi" firstAttribute="top" secondItem="DGr-aF-6ey" secondAttribute="bottom" id="eRd-B9-SxY"/>
+                            <constraint firstItem="5Tw-mh-LC2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fbs-gl-PNI"/>
+                            <constraint firstItem="DGr-aF-6ey" firstAttribute="height" secondItem="ovF-Hh-Nu1" secondAttribute="height" id="i2q-jG-yhA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGr-aF-6ey" secondAttribute="trailing" constant="20" id="lcg-54-HYc"/>
+                            <constraint firstItem="cGI-7X-v2d" firstAttribute="top" secondItem="tkk-wd-wJn" secondAttribute="bottom" id="qkO-GP-hnf"/>
                             <constraint firstItem="DGr-aF-6ey" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="syP-7u-YGb"/>
-                            <constraint firstItem="cqi-F7-bMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sz9-AX-tbt"/>
                         </constraints>
                     </view>
                 </viewController>

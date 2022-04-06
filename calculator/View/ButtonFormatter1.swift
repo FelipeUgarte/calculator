@@ -42,7 +42,8 @@ class ButtonFormatter3: UIButton {
         tintColor = .black
     }
 }
-class ButtonFormatterTotal: UILabel {
+
+class TotalLabel: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,5 +52,20 @@ class ButtonFormatterTotal: UILabel {
         layer.cornerRadius = 20.0
         textAlignment = .right
         textColor = .white
+        numberOfLines = 1
+    }
+}
+
+class OperatorLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        backgroundColor = .black
+        layer.cornerRadius = 20.0
+        textAlignment = .right
+        textColor = .white
+        numberOfLines = 0
+        
     }
 }
