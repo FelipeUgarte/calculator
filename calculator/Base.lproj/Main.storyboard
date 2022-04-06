@@ -1,24 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGr-aF-6ey" userLabel="Total">
+                                <rect key="frame" x="20" y="69" width="374" height="80"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Cwg-ar-N6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRR-vt-D9u" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="239" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.54117647058823526" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0Ia-JQ-BBd"/>
+                                    <constraint firstAttribute="height" constant="50" id="bk5-U4-C7y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="7"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-91-iIj" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="100" y="239" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2rw-g8-p1A"/>
+                                    <constraint firstAttribute="width" constant="60" id="Plu-hy-dZl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="8"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dia-Nf-y2E" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="180" y="239" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ItF-94-tZu"/>
+                                    <constraint firstAttribute="width" constant="60" id="S9A-Ko-QTK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFd-bc-Jxj" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="309" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aI2-5w-IFm"/>
+                                    <constraint firstAttribute="width" constant="60" id="gmJ-0o-elB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-zi-vHo" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="100" y="309" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="BaD-1y-tbe"/>
+                                    <constraint firstAttribute="height" constant="50" id="sFZ-a6-4qa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25q-K8-G2L" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="180" y="309" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wXK-MD-UhA"/>
+                                    <constraint firstAttribute="width" constant="60" id="wup-hy-lls"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="6"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8q-sE-Ljt" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="381" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mew-t4-O5m"/>
+                                    <constraint firstAttribute="width" constant="60" id="xDt-ZP-dgg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c50-uE-wNf" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="100" y="381" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KN1-bC-8Qs"/>
+                                    <constraint firstAttribute="width" constant="60" id="lce-oe-zSg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqa-bt-URm" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="180" y="381" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8jM-c1-jmi"/>
+                                    <constraint firstAttribute="height" constant="50" id="SeA-e1-nqj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inJ-VQ-wOU" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="451" width="140" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="oS4-WO-M0f"/>
+                                    <constraint firstAttribute="height" constant="50" id="vKC-si-bLs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="0"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNd-DW-1CU" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="180" y="451" width="60" height="50"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.54117647059999996" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8Tn-jX-orn"/>
+                                    <constraint firstAttribute="height" constant="50" id="wQj-VB-CAQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=","/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-nu-OJW" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="260" y="449" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7Zf-66-JAO"/>
+                                    <constraint firstAttribute="width" constant="60" id="PLt-z0-cEH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="="/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxW-ch-fGz" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="260" y="379" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4Kb-Wd-QT1"/>
+                                    <constraint firstAttribute="height" constant="50" id="EdD-Ba-lbj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef6-QX-9vJ" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="260" y="309" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IhZ-nz-csq"/>
+                                    <constraint firstAttribute="height" constant="50" id="oVR-nG-kD7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO0-Gx-jaR" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="260" y="239" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Xs6-to-OSK"/>
+                                    <constraint firstAttribute="height" constant="50" id="wRa-HZ-rd8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="X"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-Ia-uoY" customClass="ButtonFormatter2" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="260" y="169" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="GuV-PM-hBp"/>
+                                    <constraint firstAttribute="height" constant="50" id="VVZ-6l-NT0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="/"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-af-FoA" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="180" y="169" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6T7-ny-Tk8"/>
+                                    <constraint firstAttribute="height" constant="50" id="XF5-Sr-jh8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="%"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96z-Fd-VN6" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="100" y="169" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2mh-67-KgA"/>
+                                    <constraint firstAttribute="height" constant="50" id="WPp-Ps-8pf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+/-"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-AD-mzG" customClass="ButtonFormatter1" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="169" width="60" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8P1-pc-HA2"/>
+                                    <constraint firstAttribute="height" constant="50" id="SYk-Db-V7d"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zqa-bt-URm" firstAttribute="top" secondItem="25q-K8-G2L" secondAttribute="bottom" constant="22" id="02T-8c-8FZ"/>
+                            <constraint firstItem="jIJ-af-FoA" firstAttribute="leading" secondItem="96z-Fd-VN6" secondAttribute="trailing" constant="20" id="0zl-eP-14C"/>
+                            <constraint firstItem="c50-uE-wNf" firstAttribute="top" secondItem="bjW-zi-vHo" secondAttribute="bottom" constant="22" id="2fc-ng-E3H"/>
+                            <constraint firstItem="Ktn-AD-mzG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2oT-vr-zyJ"/>
+                            <constraint firstItem="bjW-zi-vHo" firstAttribute="top" secondItem="rrj-91-iIj" secondAttribute="bottom" constant="20" id="7Bn-jt-rww"/>
+                            <constraint firstItem="zqa-bt-URm" firstAttribute="leading" secondItem="c50-uE-wNf" secondAttribute="trailing" constant="20" id="7Y1-tg-rgQ"/>
+                            <constraint firstItem="inJ-VQ-wOU" firstAttribute="top" secondItem="n8q-sE-Ljt" secondAttribute="bottom" constant="20" id="8tc-cu-bsh"/>
+                            <constraint firstItem="DGr-aF-6ey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AJX-8c-rqJ"/>
+                            <constraint firstItem="DFd-bc-Jxj" firstAttribute="top" secondItem="uRR-vt-D9u" secondAttribute="bottom" constant="20" id="CaZ-cR-lfM"/>
+                            <constraint firstItem="2IW-nu-OJW" firstAttribute="leading" secondItem="sNd-DW-1CU" secondAttribute="trailing" constant="20" id="E2m-QH-Sbe"/>
+                            <constraint firstItem="sNd-DW-1CU" firstAttribute="leading" secondItem="inJ-VQ-wOU" secondAttribute="trailing" constant="20" id="EVc-3h-o6h"/>
+                            <constraint firstItem="IRB-Ia-uoY" firstAttribute="top" secondItem="DGr-aF-6ey" secondAttribute="bottom" constant="20" id="Elo-h3-mxT"/>
+                            <constraint firstItem="DFd-bc-Jxj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F1w-iN-mgi"/>
+                            <constraint firstItem="uRR-vt-D9u" firstAttribute="top" secondItem="Ktn-AD-mzG" secondAttribute="bottom" constant="20" id="FjE-5D-TzE"/>
+                            <constraint firstItem="25q-K8-G2L" firstAttribute="leading" secondItem="bjW-zi-vHo" secondAttribute="trailing" constant="20" id="J1u-cZ-UKs"/>
+                            <constraint firstItem="uRR-vt-D9u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="J5A-qz-OYE"/>
+                            <constraint firstItem="n8q-sE-Ljt" firstAttribute="top" secondItem="DFd-bc-Jxj" secondAttribute="bottom" constant="22" id="JOL-Y6-rVF"/>
+                            <constraint firstItem="2IW-nu-OJW" firstAttribute="top" secondItem="TxW-ch-fGz" secondAttribute="bottom" constant="20" id="KM2-yL-ZSt"/>
+                            <constraint firstItem="inJ-VQ-wOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NGD-J3-sno"/>
+                            <constraint firstItem="96z-Fd-VN6" firstAttribute="top" secondItem="DGr-aF-6ey" secondAttribute="bottom" constant="20" id="NzZ-A4-Xcr"/>
+                            <constraint firstItem="DGr-aF-6ey" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="PfB-Yg-I33"/>
+                            <constraint firstItem="ef6-QX-9vJ" firstAttribute="leading" secondItem="25q-K8-G2L" secondAttribute="trailing" constant="20" id="Qru-EU-ybo"/>
+                            <constraint firstItem="rrj-91-iIj" firstAttribute="leading" secondItem="uRR-vt-D9u" secondAttribute="trailing" constant="20" id="T8g-BN-LVr"/>
+                            <constraint firstItem="sNd-DW-1CU" firstAttribute="top" secondItem="zqa-bt-URm" secondAttribute="bottom" constant="20" id="UvA-GU-U1g"/>
+                            <constraint firstItem="TxW-ch-fGz" firstAttribute="leading" secondItem="zqa-bt-URm" secondAttribute="trailing" constant="20" id="Vqw-zx-lJw"/>
+                            <constraint firstItem="bjW-zi-vHo" firstAttribute="leading" secondItem="DFd-bc-Jxj" secondAttribute="trailing" constant="20" id="XNS-89-ckn"/>
+                            <constraint firstItem="25q-K8-G2L" firstAttribute="top" secondItem="dia-Nf-y2E" secondAttribute="bottom" constant="20" id="Y6h-dR-v01"/>
+                            <constraint firstItem="rrj-91-iIj" firstAttribute="top" secondItem="96z-Fd-VN6" secondAttribute="bottom" constant="20" id="YPv-R4-Xbc"/>
+                            <constraint firstItem="eO0-Gx-jaR" firstAttribute="top" secondItem="IRB-Ia-uoY" secondAttribute="bottom" constant="20" id="gee-ek-BsL"/>
+                            <constraint firstItem="jIJ-af-FoA" firstAttribute="top" secondItem="DGr-aF-6ey" secondAttribute="bottom" constant="20" id="gie-n8-y9N"/>
+                            <constraint firstItem="Ktn-AD-mzG" firstAttribute="top" secondItem="DGr-aF-6ey" secondAttribute="bottom" constant="20" id="i1e-3n-bzH"/>
+                            <constraint firstItem="ef6-QX-9vJ" firstAttribute="top" secondItem="eO0-Gx-jaR" secondAttribute="bottom" constant="20" id="i48-8h-JQc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGr-aF-6ey" secondAttribute="trailing" constant="20" id="lcg-54-HYc"/>
+                            <constraint firstItem="c50-uE-wNf" firstAttribute="leading" secondItem="n8q-sE-Ljt" secondAttribute="trailing" constant="20" id="ms0-nt-ORE"/>
+                            <constraint firstItem="eO0-Gx-jaR" firstAttribute="top" secondItem="IRB-Ia-uoY" secondAttribute="bottom" constant="20" id="nOx-xo-rI6"/>
+                            <constraint firstItem="TxW-ch-fGz" firstAttribute="top" secondItem="ef6-QX-9vJ" secondAttribute="bottom" constant="20" id="pjK-MA-VL3"/>
+                            <constraint firstItem="eO0-Gx-jaR" firstAttribute="leading" secondItem="dia-Nf-y2E" secondAttribute="trailing" constant="20" id="pwJ-38-KRt"/>
+                            <constraint firstItem="dia-Nf-y2E" firstAttribute="leading" secondItem="rrj-91-iIj" secondAttribute="trailing" constant="20" id="sDZ-9x-S7x"/>
+                            <constraint firstItem="n8q-sE-Ljt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sMA-nQ-69B"/>
+                            <constraint firstItem="DGr-aF-6ey" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="syP-7u-YGb"/>
+                            <constraint firstItem="IRB-Ia-uoY" firstAttribute="leading" secondItem="jIJ-af-FoA" secondAttribute="trailing" constant="20" id="xCf-uF-4ET"/>
+                            <constraint firstItem="96z-Fd-VN6" firstAttribute="leading" secondItem="Ktn-AD-mzG" secondAttribute="trailing" constant="20" id="xI5-JF-wpn"/>
+                            <constraint firstItem="dia-Nf-y2E" firstAttribute="top" secondItem="jIJ-af-FoA" secondAttribute="bottom" constant="20" id="xSu-WF-rcy"/>
+                            <constraint firstItem="2IW-nu-OJW" firstAttribute="leading" secondItem="sNd-DW-1CU" secondAttribute="trailing" constant="20" id="yMd-p6-Fb4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
