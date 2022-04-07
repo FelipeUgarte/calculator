@@ -17,6 +17,7 @@
 		0CBE08B727FCD5C300295970 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE08B627FCD5C300295970 /* calculatorUITests.swift */; };
 		0CBE08B927FCD5C300295970 /* calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE08B827FCD5C300295970 /* calculatorUITestsLaunchTests.swift */; };
 		0CBE08CB27FCD97600295970 /* ButtonFormatter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE08CA27FCD97600295970 /* ButtonFormatter1.swift */; };
+		0CBE08CD27FDEBB700295970 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE08CC27FDEBB700295970 /* CalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0CBE08B627FCD5C300295970 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		0CBE08B827FCD5C300295970 /* calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0CBE08CA27FCD97600295970 /* ButtonFormatter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormatter1.swift; sourceTree = "<group>"; };
+		0CBE08CC27FDEBB700295970 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		0CBE08C627FCD7E900295970 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CBE08CC27FDEBB700295970 /* CalculatorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CBE089A27FCD5C100295970 /* MainViewController.swift in Sources */,
+				0CBE08CD27FDEBB700295970 /* CalculatorModel.swift in Sources */,
 				0CBE089627FCD5C100295970 /* AppDelegate.swift in Sources */,
 				0CBE089827FCD5C100295970 /* SceneDelegate.swift in Sources */,
 				0CBE08CB27FCD97600295970 /* ButtonFormatter1.swift in Sources */,
