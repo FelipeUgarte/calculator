@@ -57,19 +57,41 @@ class MainViewController: UIViewController {
         updateTotal()
     }
     
+    func calculateOperation(operationToDo: OperationOptions) {
+//        switch operationToDo {
+//            case OperationOptions.plus:
+//                return calculator.total = calculator.numberA + calculator.numberB)
+//            case OperationOptions.divider:
+//                return (calculator.total = calculator.numberA / calculator.numberB)
+//        }
+        if operationToDo == OperationOptions.plus {
+            calculator.total = calculator.numberA + calculator.numberB
+        } else if operationToDo == OperationOptions.subtract {
+            calculator.total = calculator.numberA - calculator.numberB
+        } else if operationToDo == OperationOptions.multiply {
+            calculator.total = calculator.numberA * calculator.numberB
+        } else if operationToDo == OperationOptions.divider {
+            calculator.total = calculator.numberA / calculator.numberB
+        }
+        useOperator = false
+        if let total = calculator.total {
+            totalLabel.text = "\(total)"
+        }
+        calculator.numberA = 0
+        calculator.numberB = 0
+        
+    }
+    
         // MARK: - IBActions
     
     @IBAction func numbe0Button(_ sender: Any) {
-        
         addNumerOnScreen(numberToAdd: 0)
     }
     @IBAction func number1Button(_ sender: Any) {
         addNumerOnScreen(numberToAdd: 1)
-
     }
     @IBAction func number2Button(_ sender: Any) {
         addNumerOnScreen(numberToAdd: 2)
-
     }
     @IBAction func number3Button(_ sender: Any) {
         addNumerOnScreen(numberToAdd: 3)
@@ -95,24 +117,35 @@ class MainViewController: UIViewController {
     
     @IBAction func equalButton(_ sender: Any) {
         if useOperator == true {
-            calculator.total = calculator.numberA + calculator.numberB
-            useOperator.toggle()
-            if let total = calculator.total {
-                totalLabel.text = "\(total)"
+            if let operation = calculator.operation {
+                calculateOperation(operationToDo: operation)
             }
-            calculator.numberA = 0
-            calculator.numberB = 0
+//            calculator.total = calculator.numberA + calculator.numberB
+//            useOperator.toggle()
+//            if let total = calculator.total {
+//                totalLabel.text = "\(total)"
+//            }
+//            calculator.numberA = 0
+//            calculator.numberB = 0
         }
-
+        
     }
     @IBAction func plusButton(_ sender: Any) {
-        useOperator.toggle()
+        useOperator = true
+        calculator.operation = .plus
+//        calculateOperation(operationToDo: .plus)
     }
     @IBAction func subtractButton(_ sender: Any) {
+        useOperator = true
+        calculator.operation = .subtract
     }
     @IBAction func multiplyButton(_ sender: Any) {
+        useOperator = true
+        calculator.operation = .multiply
     }
     @IBAction func divisionButton(_ sender: Any) {
+        useOperator = true
+        calculator.operation = .divider
     }
     @IBAction func percentageButton(_ sender: Any) {
     }

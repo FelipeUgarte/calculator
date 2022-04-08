@@ -20,13 +20,12 @@ struct CalculatorModel {
     var temp: Double
     var numberA: Double
     var numberB: Double
-//    var operation: OperationOptions
+    var operation: OperationOptions?
     
     
     init() {
         numberA = 0
         numberB = 0
         temp = 0
-//        operation =
     }
 }
