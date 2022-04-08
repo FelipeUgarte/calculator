@@ -53,6 +53,7 @@ class TotalLabel: UILabel {
         textAlignment = .right
         textColor = .white
         numberOfLines = 1
+        adjustsFontSizeToFitWidth = true
     }
 }
 

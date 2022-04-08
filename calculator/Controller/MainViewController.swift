@@ -47,65 +47,50 @@ class MainViewController: UIViewController {
         totalLabel.text = "\(calculator.numberB)"
     }
     
+    func addNumerOnScreen( numberToAdd: Double) {
+        if useOperator == true {
+            print("calculator.numberImput=\(calculator.numberA) and calculator.total= \(calculator.total ?? 0)")
+            calculator.numberB = calculator.numberB * 10 + numberToAdd
+        } else {
+            calculator.numberA = calculator.numberA * 10 + numberToAdd
+        }
+        updateTotal()
+    }
+    
         // MARK: - IBActions
     
     @IBAction func numbe0Button(_ sender: Any) {
         
-        if useOperator == true {
-            calculator.numberA += calculator.total ?? 0
-            useOperator = false
-        } else {
-            calculator.numberA = calculator.numberA * 10 + 0
-        }
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 0)
     }
     @IBAction func number1Button(_ sender: Any) {
-        if useOperator == true {
-            print("calculator.numberImput=\(calculator.numberA) and calculator.total= \(calculator.total ?? 0)")
-            calculator.numberB = calculator.numberB * 10 + 1
-        } else {
-            calculator.numberA = calculator.numberA * 10 + 1
-        }
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 1)
 
     }
     @IBAction func number2Button(_ sender: Any) {
-        if useOperator == true {
-            calculator.numberA += calculator.total ?? 0
-            useOperator = false
-        } else {
-            calculator.numberA = calculator.numberA * 10 + 2
-        }
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 2)
 
     }
     @IBAction func number3Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 3
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 3)
     }
     @IBAction func number4Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 4
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 4)
     }
     @IBAction func number5Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 5
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 5)
     }
     @IBAction func number6Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 6
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 6)
     }
     @IBAction func number7Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 7
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 7)
     }
     @IBAction func number8Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 8
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 8)
     }
     @IBAction func number9Button(_ sender: Any) {
-        calculator.numberA = calculator.numberA * 10 + 9
-        updateTotal()
+        addNumerOnScreen(numberToAdd: 9)
     }
     
     @IBAction func equalButton(_ sender: Any) {
@@ -115,19 +100,13 @@ class MainViewController: UIViewController {
             if let total = calculator.total {
                 totalLabel.text = "\(total)"
             }
+            calculator.numberA = 0
+            calculator.numberB = 0
         }
 
     }
     @IBAction func plusButton(_ sender: Any) {
-        
         useOperator.toggle()
-//        if let number = calculator.total {
-//            calculator.total = number + calculator.numberImput
-//        } else {
-//            calculator.total = calculator.numberImput
-//        }
-//        totalLabel.text = "\(calculator.total)"
-        
     }
     @IBAction func subtractButton(_ sender: Any) {
     }
