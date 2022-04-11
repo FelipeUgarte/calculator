@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
         // MARK: - Properties
     
     var calculator = CalculatorModel()
-    var useOperator = false
+//    var useOperator = false
     
         // MARK: - viewDidLoad
     
@@ -39,51 +39,91 @@ class MainViewController: UIViewController {
     
         // MARK: - Functions
     
-    func updateTotal() {
-        guard useOperator else {
-            totalLabel.text = "\(calculator.numberA)"
-            return
-        }
-        totalLabel.text = "\(calculator.numberB)"
+    func updateScreenNumber() {
+//        guard useOperator else {
+//            totalLabel.text = "\(calculator.numberA)"
+//            return
+//        }
+//        totalLabel.text = "\(calculator.numberB)"
+        
+//        totalLabel.text = "\(calculator.tempNumber)"
     }
     
     func addNumerOnScreen( numberToAdd: Double) {
-        if useOperator == true {
-            print("calculator.numberImput=\(calculator.numberA) and calculator.total= \(calculator.total ?? 0)")
-            calculator.numberB = calculator.numberB * 10 + numberToAdd
-        } else {
-            calculator.numberA = calculator.numberA * 10 + numberToAdd
-        }
-        updateTotal()
+//        if useOperator == true {
+//            print("calculator.numberImput=\(calculator.numberA) and calculator.total= \(calculator.total ?? 0)")
+//            calculator.numberB = calculator.numberB * 10 + numberToAdd
+//        } else {
+//            calculator.numberA = calculator.numberA * 10 + numberToAdd
+//        }
+//        updateTotal()
+        
+        calculator.numberB = calculator.numberB * 10 + numberToAdd
+        totalLabel.text = "\(calculator.numberB)"
+        print("AddNumerOnScreen: \(calculator.numberB)")
     }
     
     func calculateOperation(operationToDo: OperationOptions) {
-//        switch operationToDo {
-//            case OperationOptions.plus:
-//                return calculator.total = calculator.numberA + calculator.numberB)
-//            case OperationOptions.divider:
-//                return (calculator.total = calculator.numberA / calculator.numberB)
-//        }
         if operationToDo == OperationOptions.plus {
+            print("Plus")
             calculator.total = calculator.numberA + calculator.numberB
         } else if operationToDo == OperationOptions.subtract {
+            print("Subtract \(calculator.numberA) - \(calculator.numberB)")
             calculator.total = calculator.numberA - calculator.numberB
+            
         } else if operationToDo == OperationOptions.multiply {
+            print("Multiply")
             calculator.total = calculator.numberA * calculator.numberB
         } else if operationToDo == OperationOptions.divider {
+            print("Divider")
             calculator.total = calculator.numberA / calculator.numberB
+        } else if operationToDo == OperationOptions.porcentual {
+            print("Porcentual")
+            calculator.total = calculator.numberA / 100
+            calculator.total = calculator.numberB / 100
         }
-        useOperator = false
         if let total = calculator.total {
+            print("CaluclateOperation: \(total)")
             totalLabel.text = "\(total)"
+            calculator.numberA = total
         }
-        calculator.numberA = 0
-        calculator.numberB = 0
+//        calculator.numberA = calculator.numberB
+//        calculator.numberB = 0
+//        useOperator = false
+
         
     }
     
-        // MARK: - IBActions
+    func calculatePercentage(operationToDo: OperationOptions) {
+//        if useOperator == false {
+//            calculator.numberA = calculator.numberA / 100
+//                totalLabel.text = "\(calculator.numberA)"
+//        } else if useOperator == true {
+            calculator.numberB = calculator.numberB / 100
+            totalLabel.text = "\(calculator.numberB)"
+//        }
+    }
     
+    func changeSign() {
+//        if useOperator == false {
+//            calculator.numberA = calculator.numberA * -1
+//            totalLabel.text = "\(calculator.numberA)"
+//        } else if useOperator == true {
+            calculator.numberB = calculator.numberB * -1
+            totalLabel.text = "\(calculator.numberB)"
+//        }
+    }
+    
+    fileprivate func moveNomberFromBToA() {
+        calculator.numberA = calculator.numberB
+        print("moveNomberFromBToA - NumberB: \(calculator.numberB) to \(calculator.numberA)")
+
+        calculator.numberB = 0
+        print("moveNomberFromBToA - New numberB: \(calculator.numberB)")
+    }
+    
+        // MARK: - IBActions
+        // MARK: - NumberButtons
     @IBAction func numbe0Button(_ sender: Any) {
         addNumerOnScreen(numberToAdd: 0)
     }
@@ -115,49 +155,60 @@ class MainViewController: UIViewController {
         addNumerOnScreen(numberToAdd: 9)
     }
     
-    @IBAction func equalButton(_ sender: Any) {
-        if useOperator == true {
-            if let operation = calculator.operation {
-                calculateOperation(operationToDo: operation)
-            }
-//            calculator.total = calculator.numberA + calculator.numberB
-//            useOperator.toggle()
-//            if let total = calculator.total {
-//                totalLabel.text = "\(total)"
-//            }
-//            calculator.numberA = 0
-//            calculator.numberB = 0
-        }
-        
-    }
+  
+    
+        // MARK: - Operations Buttons
     @IBAction func plusButton(_ sender: Any) {
-        useOperator = true
+//        useOperator = true
         calculator.operation = .plus
-//        calculateOperation(operationToDo: .plus)
+        moveNomberFromBToA()
     }
     @IBAction func subtractButton(_ sender: Any) {
-        useOperator = true
+//        useOperator = true
         calculator.operation = .subtract
+        print("Subtract button pressed: \(calculator.operation!)")
+        moveNomberFromBToA()
     }
     @IBAction func multiplyButton(_ sender: Any) {
-        useOperator = true
+//        useOperator = true
         calculator.operation = .multiply
+        moveNomberFromBToA()
     }
     @IBAction func divisionButton(_ sender: Any) {
-        useOperator = true
+//        useOperator = true
         calculator.operation = .divider
+        moveNomberFromBToA()
     }
     @IBAction func percentageButton(_ sender: Any) {
+        calculatePercentage(operationToDo: .porcentual)
+        
     }
     @IBAction func changeSightButton(_ sender: Any) {
+        changeSign()
     }
     @IBAction func eraceMemoryButton(_ sender: Any) {
         calculator.numberA = 0
         calculator.numberB = 0
         calculator.total = 0
-        updateTotal()
+//        updateScreenNumber()
+        totalLabel.text = "\(calculator.numberB)"
+        print("EraceMemoryButton: \(calculator.numberB)")
         
     }
     
+        // MARK: - Equal Button
+    @IBAction func equalButton(_ sender: Any) {
+        if let total = calculator.total {
+            print("EqualButton A: \(calculator.numberA), B: \(calculator.numberB), Total: \(total)")
+        }
+
+            //        if useOperator == true {
+        if let operation = calculator.operation {
+            print("Calculate Operation: \(operation)")
+            calculateOperation(operationToDo: operation)
+        }
+            //        }
+        
+    }
 }
 

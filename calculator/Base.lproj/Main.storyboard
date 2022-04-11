@@ -186,7 +186,6 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                 <connections>
-                                                    <action selector="divisionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sDd-MY-v9o"/>
                                                     <action selector="subtractButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QxK-eY-Z5q"/>
                                                 </connections>
                                             </button>

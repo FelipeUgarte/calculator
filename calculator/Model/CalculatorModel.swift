@@ -12,12 +12,14 @@ enum OperationOptions: Int {
     case subtract
     case multiply
     case divider
+    case changeSign
+    case porcentual
 }
 
 struct CalculatorModel {
     var id = UUID()
     var total: Double?
-    var temp: Double
+    var tempNumber: Double
     var numberA: Double
     var numberB: Double
     var operation: OperationOptions?
@@ -26,6 +28,6 @@ struct CalculatorModel {
     init() {
         numberA = 0
         numberB = 0
-        temp = 0
+        tempNumber = 0
     }
 }
