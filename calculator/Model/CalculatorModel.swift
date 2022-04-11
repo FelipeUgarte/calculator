@@ -19,7 +19,6 @@ enum OperationOptions: Int {
 struct CalculatorModel {
     var id = UUID()
     var total: Double?
-    var tempNumber: Double
     var numberA: Double
     var numberB: Double
     var operation: OperationOptions?
@@ -28,6 +27,5 @@ struct CalculatorModel {
     init() {
         numberA = 0
         numberB = 0
-        tempNumber = 0
     }
 }
