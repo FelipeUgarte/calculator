@@ -22,10 +22,11 @@ struct CalculatorModel {
     var numberA: Double
     var numberB: Double
     var operation: OperationOptions?
-    
+    var compelteOperationText: String
     
     init() {
         numberA = 0
         numberB = 0
+        compelteOperationText = ""
     }
 }

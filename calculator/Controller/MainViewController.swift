@@ -13,9 +13,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var totalLabel: TotalLabel!
     @IBOutlet weak var Operation1Label: OperatorLabel!
-    @IBOutlet weak var Operation2Label: OperatorLabel!
-    @IBOutlet weak var Operation3Label: OperatorLabel!
-    @IBOutlet weak var Operation4Label: OperatorLabel!
     
     
         // MARK: - Properties
@@ -29,9 +26,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         Operation1Label.isHidden = true
-        Operation2Label.isHidden = true
-        Operation3Label.isHidden = true
-        Operation4Label.isHidden = true
+
     }
     
     
@@ -87,6 +82,12 @@ class MainViewController: UIViewController {
         print("moveNomberFromBToA - New numberB: \(calculator.numberB)")
     }
     
+    fileprivate func updateOperatioLabel() {
+        Operation1Label.text = calculator.compelteOperationText
+        Operation1Label.isHidden = false
+
+    }
+
     
         // MARK: - IBActions - NumberButtons
     
@@ -125,6 +126,8 @@ class MainViewController: UIViewController {
         // MARK: - IBActions - Operations Buttons
     @IBAction func plusButton(_ sender: Any) {
         calculator.operation = .plus
+        calculator.compelteOperationText = "\(calculator.numberB) + "
+        updateOperatioLabel()
         moveNomberFromBToA()
     }
     @IBAction func subtractButton(_ sender: Any) {
@@ -151,11 +154,15 @@ class MainViewController: UIViewController {
         calculator.numberB = 0
         calculator.total = 0
         totalLabel.text = "\(calculator.numberB)"
+        calculator.compelteOperationText = ""
+        updateOperatioLabel()
         print("EraceMemoryButton: \(calculator.numberB)")
     }
     
     
         // MARK: - IBActions - Equal Button
+
+    
     @IBAction func equalButton(_ sender: Any) {
         if let total = calculator.total {
             print("EqualButton A: \(calculator.numberA), B: \(calculator.numberB), Total: \(total)")
@@ -163,6 +170,8 @@ class MainViewController: UIViewController {
 
         if let operation = calculator.operation {
             print("Calculate Operation: \(operation)")
+            calculator.compelteOperationText = calculator.compelteOperationText + "\(calculator.numberB)"
+            updateOperatioLabel()
             calculateOperation(operationToDo: operation)
         }
     }
