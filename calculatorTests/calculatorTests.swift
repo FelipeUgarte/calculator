@@ -26,6 +26,13 @@ class calculatorTests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
 
+    func testOperatorCalculation() throws {
+        XCTAssert(CalculatorModel.calculateOperation(operationToDo: .plus, numberA: 10, numberB: 2) == 12)
+        XCTAssert(CalculatorModel.calculateOperation(operationToDo: .subtract, numberA: 10, numberB: 2) == 8)
+        XCTAssert(CalculatorModel.calculateOperation(operationToDo: .multiply, numberA: 10, numberB: 2) == 20)
+        XCTAssert(CalculatorModel.calculateOperation(operationToDo: .divider, numberA: 10, numberB: 2) == 5)
+        XCTAssert(CalculatorModel.calculatePercentage(number: 5) == 0.05)
+    }
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
