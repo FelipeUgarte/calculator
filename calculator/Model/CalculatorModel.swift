@@ -12,21 +12,31 @@ enum OperationOptions: Int {
     case subtract
     case multiply
     case divider
-    case changeSign
     case porcentual
 }
 
+    /// A class for storing all the data needed for the app to work
+    ///
+    /// All the information that need to be store in orther for the app to work, adding numbers on the screen or performing operations, are stored on a variable of the type CalculatorModel.
+    ///
+    /// Parameters:
+    ///  - total: The result of any mathematical operation (selected by the user)
+    ///  - numberA: First number number typed by the user.
+    ///  - numberB: Second number typed by the user.
+    ///  - operation: Stores the operation selected by the user
+    ///  - completeOperationText: Used to show to the user the complete operation, with all numbers and the operator.
+    ///
 class CalculatorModel {
     var id = UUID()
     var total: Double?
-    var numberA: Double
     var numberB: Double
+    var numberA: Double
     var operation: OperationOptions?
     var compelteOperationText: String
     
     init() {
-        numberA = 0
         numberB = 0
+        numberA = 0
         compelteOperationText = ""
     }
     
@@ -36,30 +46,49 @@ class CalculatorModel {
     class func calculateOperation(operationToDo: OperationOptions, numberA: Double, numberB: Double) -> Double {
         var total: Double = 0
         
-        if operationToDo == OperationOptions.plus {
-            print("Plus")
-            total = numberA + numberB
-        } else if operationToDo == OperationOptions.subtract {
-            print("Subtract \(numberA) - \(numberB)")
-            total = numberA - numberB
-            
-        } else if operationToDo == OperationOptions.multiply {
-            print("Multiply")
-            total = numberA * numberB
-        } else if operationToDo == OperationOptions.divider {
-            print("Divider")
-            total = numberA / numberB
-        } else if operationToDo == OperationOptions.porcentual {
-            print("Porcentual")
-            total = numberA / 100
-            total = numberB / 100
+        switch operationToDo {
+            case .plus:
+                print("Plus")
+                total = numberA + numberB
+                return total
+            case .subtract:
+                print("Subtract \(numberA) - \(numberB)")
+                total = numberA - numberB
+                return total
+            case .multiply:
+                print("Multiply")
+                total = numberA * numberB
+                return total
+            case .divider:
+                print("Divider")
+                total = numberA / numberB
+                return total
+            case .porcentual:
+                print("Porcentual")
+                total = numberA / 100
+                total = numberB / 100
+                return total
         }
-        return total
-//        if let total = total {
-//            print("CaluclateOperation: \(total)")
-//            totalLabel.text = "\(total)"
-//            numberA = total
+        
+//        if operationToDo == OperationOptions.plus {
+//            print("Plus")
+//            total = numberA + numberB
+//        } else if operationToDo == OperationOptions.subtract {
+//            print("Subtract \(numberA) - \(numberB)")
+//            total = numberA - numberB
+//
+//        } else if operationToDo == OperationOptions.multiply {
+//            print("Multiply")
+//            total = numberA * numberB
+//        } else if operationToDo == OperationOptions.divider {
+//            print("Divider")
+//            total = numberA / numberB
+//        } else if operationToDo == OperationOptions.porcentual {
+//            print("Porcentual")
+//            total = numberA / 100
+//            total = numberB / 100
 //        }
+//        return total
     }
     
     class func calculatePercentage(number: Double) -> Double {
@@ -74,11 +103,11 @@ class CalculatorModel {
         /// is copied to the numberA.
         /// The variable numberB is set to 0
         /// ```
-    func moveNomberFromBToA() {
-        numberA = numberB
-        print("moveNomberFromBToA - NumberB: \(numberB) to \(numberA)")
+    func moveNomberFromAToB() {
+        numberB = numberA
+        print("moveNomberFromAToB - NumberA:\(numberA) to NumberB:\(numberB)")
         
-        numberB = 0
-        print("moveNomberFromBToA - New numberB: \(numberB)")
+        numberA = 0
+        print("moveNomberFromAToB - New numberB: \(numberA)")
     }
 }
