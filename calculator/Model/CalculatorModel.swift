@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum OperationOptions: Int {
-    case plus
-    case subtract
-    case multiply
-    case divider
-    case porcentual
+enum OperationOptions: String {
+    case plus = "+"
+    case subtract = "-"
+    case multiply = "X"
+    case divider = "/"
+//    case porcentual
 }
 
     /// A class for storing all the data needed for the app to work
@@ -63,11 +63,11 @@ class CalculatorModel {
                 print("Divider")
                 total = numberA / numberB
                 return total
-            case .porcentual:
-                print("Porcentual")
-                total = numberA / 100
-                total = numberB / 100
-                return total
+//            case .porcentual:
+//                print("Porcentual")
+//                total = numberA / 100
+//                total = numberB / 100
+//                return total
         }
         
 //        if operationToDo == OperationOptions.plus {
